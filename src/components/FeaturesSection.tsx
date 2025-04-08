@@ -1,22 +1,26 @@
 
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 interface FeatureCardProps {
   title: string;
   description: string;
   icon: React.ComponentType<{ className?: string }>;
   color: string;
+  link: string;
 }
 
-const FeatureCard: React.FC<FeatureCardProps> = ({ title, description, icon: Icon, color }) => {
+const FeatureCard: React.FC<FeatureCardProps> = ({ title, description, icon: Icon, color, link }) => {
   return (
-    <div className="bg-white rounded-2xl shadow-lg p-6 hover-scale gradient-card border border-gray-100">
-      <div className={`w-14 h-14 rounded-xl ${color} mb-6 flex items-center justify-center`}>
-        <Icon className="w-7 h-7 text-white" />
+    <Link to={link} className="block">
+      <div className="bg-white rounded-2xl shadow-lg p-6 hover-scale gradient-card border border-gray-100 h-full">
+        <div className={`w-14 h-14 rounded-xl ${color} mb-6 flex items-center justify-center`}>
+          <Icon className="w-7 h-7 text-white" />
+        </div>
+        <h3 className="text-xl font-bold mb-3 text-vibrocia-dark">{title}</h3>
+        <p className="text-gray-600">{description}</p>
       </div>
-      <h3 className="text-xl font-bold mb-3 text-vibrocia-dark">{title}</h3>
-      <p className="text-gray-600">{description}</p>
-    </div>
+    </Link>
   );
 };
 
@@ -39,6 +43,7 @@ const FeaturesSection = () => {
               description={feature.description}
               icon={feature.icon}
               color={feature.color}
+              link={feature.link}
             />
           ))}
         </div>
@@ -58,7 +63,8 @@ const features = [
         <path d="M18 9h2a2 2 0 0 1 2 2v11l-4-4h-6a2 2 0 0 1-2-2v-1"/>
       </svg>
     ),
-    color: "bg-vibrocia-blue"
+    color: "bg-vibrocia-blue",
+    link: "/features/ai-chat-coach"
   },
   {
     title: "Roleplay & Real-Life Challenges",
@@ -73,7 +79,8 @@ const features = [
         <path d="m18 15-2 2-2-2"/>
       </svg>
     ),
-    color: "bg-vibrocia-teal"
+    color: "bg-vibrocia-teal",
+    link: "/features/roleplay-zone"
   },
   {
     title: "Confidence & Mood Tracker",
@@ -84,7 +91,8 @@ const features = [
         <path d="m19 9-5 5-4-4-3 3"/>
       </svg>
     ),
-    color: "bg-vibrocia-lavender"
+    color: "bg-vibrocia-lavender",
+    link: "/features/confidence-tracker"
   },
   {
     title: "Personalized Learning Paths",
@@ -95,7 +103,8 @@ const features = [
         <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
       </svg>
     ),
-    color: "bg-vibrocia-blue"
+    color: "bg-vibrocia-blue",
+    link: "/features/personalized-journey"
   }
 ];
 

@@ -11,6 +11,11 @@ import Contact from "./pages/Contact";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import NotFound from "./pages/NotFound";
+import AIChatCoach from "./pages/features/AIChatCoach";
+import RoleplayZone from "./pages/features/RoleplayZone";
+import ConfidenceTracker from "./pages/features/ConfidenceTracker";
+import PersonalizedJourney from "./pages/features/PersonalizedJourney";
+import ReflectionJournal from "./pages/features/ReflectionJournal";
 
 const queryClient = new QueryClient();
 
@@ -23,6 +28,11 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/features" element={<Features />} />
+          <Route path="/features/ai-chat-coach" element={<AIChatCoach />} />
+          <Route path="/features/roleplay-zone" element={<RoleplayZone />} />
+          <Route path="/features/confidence-tracker" element={<ConfidenceTracker />} />
+          <Route path="/features/personalized-journey" element={<PersonalizedJourney />} />
+          <Route path="/features/reflection-journal" element={<ReflectionJournal />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/login" element={<Login />} />
