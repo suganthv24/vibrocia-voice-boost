@@ -1,5 +1,6 @@
 
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 
 const CalloutSection = () => {
@@ -25,8 +26,12 @@ const CalloutSection = () => {
           <p className="text-lg text-white/90 mb-8 max-w-xl mx-auto">
             Join thousands of engineering and technical students who are finding their voice and building confidence.
           </p>
-          <Button size="lg" className="bg-white text-vibrocia-blue hover:bg-white/90 px-8 py-6 rounded-full hover-scale">
-            Start Your Journey
+          <Button 
+            size="lg" 
+            className="bg-white text-vibrocia-blue hover:bg-white/90 px-8 py-6 rounded-full hover-scale"
+            asChild
+          >
+            <Link to="/signup">Start Your Journey</Link>
           </Button>
         </div>
       </div>
