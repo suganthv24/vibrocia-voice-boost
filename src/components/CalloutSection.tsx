@@ -2,6 +2,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
+import { Users } from 'lucide-react';
 
 const CalloutSection = () => {
   return (
@@ -20,11 +21,14 @@ const CalloutSection = () => {
       
       <div className="container mx-auto px-6 lg:px-8 relative z-10">
         <div className="max-w-3xl mx-auto text-center">
+          <div className="mb-6 mx-auto bg-white/20 w-20 h-20 rounded-full flex items-center justify-center">
+            <Users className="h-10 w-10 text-white" />
+          </div>
           <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
-            Built for students who want to speak up, lead, and grow — starting from where they are.
+            Speak up. Stand out. Step into your full potential — with Vibrocia.
           </h2>
           <p className="text-lg text-white/90 mb-8 max-w-xl mx-auto">
-            Join thousands of engineering and technical students who are finding their voice and building confidence.
+            Join hundreds of engineering and technical students who are finding their voice and building confidence.
           </p>
           <Button 
             size="lg" 

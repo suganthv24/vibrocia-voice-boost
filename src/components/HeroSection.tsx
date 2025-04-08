@@ -1,6 +1,8 @@
 
 import React from 'react';
 import { Button } from '@/components/ui/button';
+import { Play } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const HeroSection = () => {
   return (
@@ -14,13 +16,22 @@ const HeroSection = () => {
               <span className="text-vibrocia-blue">Build Your Confidence.</span>
             </h1>
             <p className="text-lg md:text-xl text-gray-600 mb-8 max-w-xl">
-              Vibrocia helps you overcome public speaking fear, social anxiety, and communication blocks — one step at a time.
+              Vibrocia helps students overcome fear of communication, boost confidence, and grow into expressive, socially ready individuals.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button size="lg" className="bg-vibrocia-blue hover:bg-vibrocia-blue/90 text-white px-8 py-6 rounded-full hover-scale">
-                Get Started
+              <Button 
+                size="lg" 
+                className="bg-vibrocia-blue hover:bg-vibrocia-blue/90 text-white px-8 py-6 rounded-full hover-scale"
+                asChild
+              >
+                <Link to="/signup">Get Started</Link>
               </Button>
-              <Button variant="outline" size="lg" className="border-vibrocia-blue text-vibrocia-blue hover:bg-vibrocia-blue/10 px-8 py-6 rounded-full">
+              <Button 
+                variant="outline" 
+                size="lg" 
+                className="border-vibrocia-blue text-vibrocia-blue hover:bg-vibrocia-blue/10 px-8 py-6 rounded-full"
+              >
+                <Play className="mr-2 h-5 w-5" />
                 Watch Demo
               </Button>
             </div>
@@ -36,6 +47,7 @@ const HeroSection = () => {
                 <path d="M248 202C231.431 202 218 215.431 218 232V233C218 233.552 218.448 234 219 234H277C277.552 234 278 233.552 278 233V232C278 215.431 264.569 202 248 202Z" fill="white"/>
               </svg>
             </div>
+            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-24 h-24 bg-vibrocia-blue/10 rounded-full animate-pulse"></div>
             <div className="absolute -bottom-4 -right-4 -left-4 h-4 bg-gradient-to-t from-white to-transparent"></div>
           </div>
         </div>

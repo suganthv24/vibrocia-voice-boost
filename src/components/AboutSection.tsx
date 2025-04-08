@@ -1,5 +1,7 @@
 
 import React from 'react';
+import { Link } from 'react-router-dom';
+import { Button } from '@/components/ui/button';
 
 const AboutSection = () => {
   return (
@@ -8,7 +10,8 @@ const AboutSection = () => {
         <div className="max-w-3xl mx-auto text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-6 text-vibrocia-dark">Why Vibrocia?</h2>
           <p className="text-lg text-gray-600 leading-relaxed">
-            Many students struggle not with knowledge, but with expressing it. Vibrocia bridges the gap between skill and expression with personalized, AI-driven tools.
+            Many students struggle not because they lack skills, but because they fear expressing them. 
+            Vibrocia bridges this gap with a powerful blend of AI coaching, emotional tracking, and practical challenges.
           </p>
         </div>
         
@@ -23,10 +26,21 @@ const AboutSection = () => {
                 <div className="w-12 h-12 bg-vibrocia-blue/10 rounded-full flex items-center justify-center mb-4">
                   <challenge.icon className="w-6 h-6 text-vibrocia-blue" />
                 </div>
+                <h4 className="font-bold text-vibrocia-dark mb-2">{challenge.title}</h4>
                 <p className="text-gray-700">{challenge.text}</p>
               </div>
             ))}
           </div>
+        </div>
+        
+        <div className="mt-16 text-center">
+          <h3 className="text-2xl font-bold mb-6 text-vibrocia-dark">Ready to overcome these challenges?</h3>
+          <Button 
+            className="bg-vibrocia-blue hover:bg-vibrocia-blue/90 text-white px-8 py-2 rounded-full hover-scale"
+            asChild
+          >
+            <Link to="/features">Explore Our Features</Link>
+          </Button>
         </div>
       </div>
     </section>
@@ -44,7 +58,8 @@ const challenges = [
         <path d="M14 9h2"/>
       </svg>
     ),
-    text: "Fear of interviews and public speaking"
+    title: "Interview Anxiety",
+    text: "Fear of job interviews and networking events"
   },
   {
     icon: ({ className }: { className?: string }) => (
@@ -54,6 +69,7 @@ const challenges = [
         <path d="M3 9h18"/>
       </svg>
     ),
+    title: "Presentation Stress",
     text: "Poor project and seminar presentations"
   },
   {
@@ -63,6 +79,7 @@ const challenges = [
         <circle cx="12" cy="8" r="2"/>
       </svg>
     ),
+    title: "Low Confidence",
     text: "Shyness and lack of social participation"
   },
   {
@@ -84,7 +101,8 @@ const challenges = [
         <path d="m7 20.66 1-1.73"/>
       </svg>
     ),
-    text: "Missed leadership and networking opportunities"
+    title: "Missed Opportunities",
+    text: "Missed leadership and networking connections"
   },
   {
     icon: ({ className }: { className?: string }) => (
@@ -92,7 +110,8 @@ const challenges = [
         <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>
       </svg>
     ),
-    text: "Lack of emotional awareness"
+    title: "Emotional Awareness",
+    text: "Difficulty recognizing and expressing emotions"
   }
 ];
 
