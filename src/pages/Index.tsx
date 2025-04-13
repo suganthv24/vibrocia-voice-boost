@@ -1,11 +1,10 @@
-
 import React, { useEffect } from 'react';
 import Navbar from '@/components/Navbar';
 import HeroSection from '@/components/HeroSection';
 import AboutSection from '@/components/AboutSection';
 import FeaturesSection from '@/components/FeaturesSection';
 import CalloutSection from '@/components/CalloutSection';
-import TestimonialsSection from '@/components/TestimonialsSection';
+// Remove the import for TestimonialsSection
 import Footer from '@/components/Footer';
 
 const Index = () => {
@@ -56,9 +55,7 @@ const Index = () => {
         <CalloutSection />
       </div>
       
-      <div className="section-reveal">
-        <TestimonialsSection />
-      </div>
+      {/* Remove the entire TestimonialsSection div */}
       
       <Footer />
     </div>
