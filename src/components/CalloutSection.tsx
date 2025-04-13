@@ -2,12 +2,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
-import { Users } from 'lucide-react';
+import { Users, ArrowRight } from 'lucide-react';
 
 const CalloutSection = () => {
   return (
     <section className="py-20 relative overflow-hidden">
       <div className="absolute inset-0 z-0 bg-gradient-to-r from-vibrocia-blue to-vibrocia-teal opacity-90"></div>
+      
+      {/* Animated background elements */}
       <div className="absolute inset-0 z-0 opacity-10">
         <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
           <defs>
@@ -18,6 +20,11 @@ const CalloutSection = () => {
           <rect width="100%" height="100%" fill="url(#smallGrid)" />
         </svg>
       </div>
+      
+      {/* Floating circles */}
+      <div className="absolute top-10 left-10 w-32 h-32 rounded-full bg-white opacity-5 animate-float-enhanced"></div>
+      <div className="absolute bottom-10 right-10 w-24 h-24 rounded-full bg-white opacity-5 animate-float-enhanced" style={{ animationDelay: '1s' }}></div>
+      <div className="absolute top-1/2 right-1/4 w-16 h-16 rounded-full bg-white opacity-5 animate-float-enhanced" style={{ animationDelay: '2s' }}></div>
       
       <div className="container mx-auto px-6 lg:px-8 relative z-10">
         <div className="max-w-3xl mx-auto text-center">
@@ -32,10 +39,13 @@ const CalloutSection = () => {
           </p>
           <Button 
             size="lg" 
-            className="bg-white text-vibrocia-blue hover:bg-white/90 px-8 py-6 rounded-full hover-scale"
+            className="bg-white text-vibrocia-blue hover:bg-white/90 px-8 py-6 rounded-full hover-scale btn-hover-glow group"
             asChild
           >
-            <Link to="/signup">Start Your Journey</Link>
+            <Link to="/signup">
+              Start Your Journey
+              <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+            </Link>
           </Button>
         </div>
       </div>

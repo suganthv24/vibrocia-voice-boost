@@ -80,6 +80,10 @@
   @apply bg-gradient-to-b from-white to-vibrocia-light/30;
 }
 
+.gradient-lavender {
+  @apply bg-gradient-to-r from-vibrocia-lavender/90 to-vibrocia-blue/70;
+}
+
 /* Hero wave shape */
 .wave-shape {
   position: absolute;
@@ -99,4 +103,86 @@
 
 .wave-shape .shape-fill {
   fill: #FFFFFF;
+}
+
+/* Enhanced animations */
+@keyframes float-enhanced {
+  0%, 100% {
+    transform: translateY(0) rotate(0);
+  }
+  25% {
+    transform: translateY(-15px) rotate(1deg);
+  }
+  75% {
+    transform: translateY(-5px) rotate(-1deg);
+  }
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    opacity: 0.6;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+}
+
+.animate-float-enhanced {
+  animation: float-enhanced 6s ease-in-out infinite;
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 4s ease-in-out infinite;
+}
+
+/* Button animations */
+.btn-hover-glow {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.btn-hover-glow:after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255,255,255,0.8) 0%, rgba(255,255,255,0) 60%);
+  opacity: 0;
+  transform: scale(0.1);
+  transition: all 0.5s ease-out;
+}
+
+.btn-hover-glow:hover:after {
+  opacity: 0.15;
+  transform: scale(1);
+}
+
+/* Card hover effects */
+.feature-card {
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+  cursor: pointer;
+}
+
+.feature-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1), 0 10px 10px -5px rgba(0,0,0,0.04);
+}
+
+.feature-card .feature-icon {
+  transition: all 0.3s ease;
+}
+
+.feature-card:hover .feature-icon {
+  transform: scale(1.1);
+}
+
+/* Text effects */
+.gradient-text {
+  @apply bg-gradient-to-r from-vibrocia-blue to-vibrocia-teal text-transparent bg-clip-text;
 }

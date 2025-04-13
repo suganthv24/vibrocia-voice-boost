@@ -10,28 +10,32 @@ import Footer from '@/components/Footer';
 
 const Index = () => {
   useEffect(() => {
-    const handleScroll = () => {
-      const sections = document.querySelectorAll('.section-reveal');
-      
-      sections.forEach(section => {
-        const sectionTop = (section as HTMLElement).getBoundingClientRect().top;
-        const windowHeight = window.innerHeight;
-        
-        if (sectionTop < windowHeight * 0.75) {
-          section.classList.add('section-revealed');
+    // Intersection Observer for smooth section reveals
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('section-revealed');
+          // Once revealed, no need to observe anymore
+          observer.unobserve(entry.target);
         }
       });
-    };
+    }, {
+      root: null,
+      rootMargin: '0px',
+      threshold: 0.1
+    });
     
-    // Initial check for elements in view
-    handleScroll();
-    
-    // Add scroll event listener
-    window.addEventListener('scroll', handleScroll);
+    // Observe all sections with section-reveal class
+    const sections = document.querySelectorAll('.section-reveal');
+    sections.forEach(section => {
+      observer.observe(section);
+    });
     
     // Clean up
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      sections.forEach(section => {
+        observer.unobserve(section);
+      });
     };
   }, []);
   
