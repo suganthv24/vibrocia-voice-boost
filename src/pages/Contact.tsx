@@ -1,5 +1,4 @@
-
-import React, { useEffect, useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { Button } from '@/components/ui/button';
@@ -152,8 +151,7 @@ const Contact = () => {
                     </div>
                     <div>
                       <h3 className="font-medium text-vibrocia-dark">Email</h3>
-                      <p className="text-gray-600">contact@vibrocia.com</p>
-                      <p className="text-gray-600">support@vibrocia.com</p>
+                      <p className="text-gray-600">suganthv24@gmail.com</p>
                     </div>
                   </div>
                   
@@ -163,7 +161,7 @@ const Contact = () => {
                     </div>
                     <div>
                       <h3 className="font-medium text-vibrocia-dark">Phone</h3>
-                      <p className="text-gray-600">+1 (555) 123-4567</p>
+                      <p className="text-gray-600">+91 7010791279</p>
                       <p className="text-gray-600">Mon-Fri: 9am - 5pm EST</p>
                     </div>
                   </div>
@@ -174,8 +172,8 @@ const Contact = () => {
                     </div>
                     <div>
                       <h3 className="font-medium text-vibrocia-dark">Location</h3>
-                      <p className="text-gray-600">123 Tech Campus Drive</p>
-                      <p className="text-gray-600">Boston, MA 02115</p>
+                      <p className="text-gray-600">Sri eshwar college of engineering</p>
+                      <p className="text-gray-600">Kinathukidavu, Coimbatore, Tamil Nadu</p>
                     </div>
                   </div>
                 </div>
