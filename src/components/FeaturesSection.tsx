@@ -1,12 +1,10 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { 
   MessageCircle, 
   Users, 
   BarChart2, 
-  BookOpen, 
-  PenTool
+  BookOpen
 } from 'lucide-react';
 
 interface FeatureCardProps {
@@ -48,7 +46,7 @@ const FeaturesSection = () => {
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {features.map((feature, index) => (
             <FeatureCard
               key={index}
@@ -65,7 +63,6 @@ const FeaturesSection = () => {
   );
 };
 
-// Feature data
 const features = [
   {
     title: "AI Chat Coach",
@@ -94,13 +91,6 @@ const features = [
     icon: BookOpen,
     color: "bg-vibrocia-blue",
     link: "/features/personalized-journey"
-  },
-  {
-    title: "Reflection Journal",
-    description: "Document your thoughts, feelings, and progress with guided prompts to deepen your self-awareness.",
-    icon: PenTool,
-    color: "bg-gradient-lavender",
-    link: "/features/reflection-journal"
   }
 ];
 
