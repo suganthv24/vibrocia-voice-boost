@@ -87,7 +87,7 @@ const Contact = () => {
       <section className="py-20 bg-white">
         <div className="container mx-auto px-6 lg:px-8">
           <div className="section-reveal">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-20">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
               <div className="bg-white p-8 rounded-2xl shadow-lg">
                 <h2 className="text-2xl font-bold mb-6 text-vibrocia-dark">Send Us a Message</h2>
                 <form onSubmit={handleSubmit}>
@@ -191,45 +191,6 @@ const Contact = () => {
                       <Youtube className="h-6 w-6 text-vibrocia-blue" />
                     </a>
                   </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          
-          <div className="section-reveal">
-            <div className="bg-vibrocia-light rounded-2xl p-10 shadow-lg text-center">
-              <h2 className="text-2xl font-bold mb-6 text-vibrocia-dark">Frequently Asked Questions</h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-left">
-                <div>
-                  <h3 className="font-bold text-vibrocia-dark mb-2">Is Vibrocia only for engineering students?</h3>
-                  <p className="text-gray-600">
-                    While Vibrocia was designed with engineering and technical students in mind, 
-                    any student looking to improve their communication skills can benefit from our platform.
-                  </p>
-                </div>
-                
-                <div>
-                  <h3 className="font-bold text-vibrocia-dark mb-2">How much time should I spend on Vibrocia each day?</h3>
-                  <p className="text-gray-600">
-                    Even 10-15 minutes daily can make a difference. Consistent practice yields the best results, 
-                    but we recommend starting with whatever time commitment feels manageable for you.
-                  </p>
-                </div>
-                
-                <div>
-                  <h3 className="font-bold text-vibrocia-dark mb-2">Is my data secure on Vibrocia?</h3>
-                  <p className="text-gray-600">
-                    Absolutely. We take privacy seriously and use industry-standard encryption to protect your data. 
-                    Your personal information and journal entries are never shared without your explicit permission.
-                  </p>
-                </div>
-                
-                <div>
-                  <h3 className="font-bold text-vibrocia-dark mb-2">Can I use Vibrocia on my mobile device?</h3>
-                  <p className="text-gray-600">
-                    Yes! Vibrocia is fully responsive and works on smartphones, tablets, and computers, 
-                    allowing you to practice your communication skills anytime, anywhere.
-                  </p>
                 </div>
               </div>
             </div>
