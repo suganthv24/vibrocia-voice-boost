@@ -1,4 +1,3 @@
-
 import React, { useEffect } from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
@@ -20,13 +19,10 @@ const About = () => {
       });
     };
     
-    // Initial check for elements in view
     handleScroll();
     
-    // Add scroll event listener
     window.addEventListener('scroll', handleScroll);
     
-    // Clean up
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
@@ -74,69 +70,6 @@ const About = () => {
                   alt="Team collaboration" 
                   className="w-full h-auto rounded-2xl"
                 />
-              </div>
-            </div>
-          </div>
-          
-          <div className="section-reveal">
-            <div className="mb-20">
-              <h2 className="text-3xl font-bold mb-8 text-center text-vibrocia-dark">Our Values</h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300">
-                  <div className="w-16 h-16 bg-vibrocia-blue/10 rounded-full flex items-center justify-center mb-6 mx-auto">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-vibrocia-blue" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                      <path d="M12 2v20"/>
-                      <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
-                    </svg>
-                  </div>
-                  <h3 className="text-xl font-bold mb-3 text-center text-vibrocia-dark">Growth</h3>
-                  <p className="text-gray-600 text-center">
-                    We believe in continuous improvement, both for our users and ourselves. 
-                    Progress, not perfection, is our guiding principle.
-                  </p>
-                </div>
-                
-                <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300">
-                  <div className="w-16 h-16 bg-vibrocia-teal/10 rounded-full flex items-center justify-center mb-6 mx-auto">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-vibrocia-teal" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                      <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>
-                    </svg>
-                  </div>
-                  <h3 className="text-xl font-bold mb-3 text-center text-vibrocia-dark">Empathy</h3>
-                  <p className="text-gray-600 text-center">
-                    Understanding the emotional challenges of communication difficulties 
-                    is at the heart of everything we create.
-                  </p>
-                </div>
-                
-                <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300">
-                  <div className="w-16 h-16 bg-vibrocia-lavender/10 rounded-full flex items-center justify-center mb-6 mx-auto">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-vibrocia-lavender" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                      <path d="m12 8-9.04 9.06a2.82 2.82 0 1 0 3.98 3.98L16 12"/>
-                      <circle cx="17" cy="7" r="5"/>
-                    </svg>
-                  </div>
-                  <h3 className="text-xl font-bold mb-3 text-center text-vibrocia-dark">Courage</h3>
-                  <p className="text-gray-600 text-center">
-                    We celebrate every step our users take outside their comfort zones, 
-                    because courage is a muscle that grows with practice.
-                  </p>
-                </div>
-                
-                <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300">
-                  <div className="w-16 h-16 bg-vibrocia-blue/10 rounded-full flex items-center justify-center mb-6 mx-auto">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-vibrocia-blue" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                      <path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/>
-                      <path d="M12 9v4"/>
-                      <path d="M12 17h.01"/>
-                    </svg>
-                  </div>
-                  <h3 className="text-xl font-bold mb-3 text-center text-vibrocia-dark">Confidence</h3>
-                  <p className="text-gray-600 text-center">
-                    We believe confidence is a skill that can be learned, practiced, and mastered 
-                    with the right tools and support.
-                  </p>
-                </div>
               </div>
             </div>
           </div>
