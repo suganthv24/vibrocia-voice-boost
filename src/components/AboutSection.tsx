@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
@@ -32,16 +31,6 @@ const AboutSection = () => {
               </div>
             ))}
           </div>
-          
-          {/* Added statistics section */}
-          <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
-            {stats.map((stat, index) => (
-              <div key={index} className="text-center p-6">
-                <div className="text-3xl md:text-4xl font-bold gradient-text mb-2">{stat.value}</div>
-                <p className="text-gray-600">{stat.label}</p>
-              </div>
-            ))}
-          </div>
         </div>
         
         <div className="mt-16 text-center">
@@ -61,7 +50,6 @@ const AboutSection = () => {
   );
 };
 
-// Define challenge icons and text
 const challenges = [
   {
     icon: ({ className }: { className?: string }) => (
@@ -105,7 +93,7 @@ const challenges = [
         <path d="M12 22v-2"/>
         <path d="m17 20.66-1-1.73"/>
         <path d="M11 10.27 7 3.34"/>
-        <path d="m20.66 17-1.73-1"/>
+        <path d="m20.66 17-1.73 1"/>
         <path d="m3.34 7 1.73 1"/>
         <path d="M14 12h8"/>
         <path d="M2 12h2"/>
@@ -126,22 +114,6 @@ const challenges = [
     ),
     title: "Emotional Awareness",
     text: "Difficulty recognizing and expressing emotions"
-  }
-];
-
-// Added statistics
-const stats = [
-  {
-    value: "78%",
-    label: "Students improved confidence within 4 weeks"
-  },
-  {
-    value: "4.8/5",
-    label: "Average user satisfaction rating"
-  },
-  {
-    value: "10,000+",
-    label: "Successful practice conversations"
   }
 ];
 
