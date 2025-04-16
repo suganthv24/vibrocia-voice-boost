@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -31,12 +30,11 @@ import {
 import { useIsMobile } from "@/hooks/use-mobile";
 import { Link } from "react-router-dom";
 
-// Sample data - in a real app this would come from an API/database
 const userData = {
   name: "Alex",
   confidenceScore: 7.2,
   streak: 5,
-  todayMood: "happy", // could be happy, neutral, sad
+  todayMood: "happy",
   quote: "Every conversation is an opportunity to learn and grow.",
   suggestedActivity: "Try a roleplay: Introduce yourself in an interview",
   dailyChallenge: "Greet a new classmate",
@@ -52,11 +50,19 @@ const userData = {
   ]
 };
 
-// Mood emoji mapping
 const moodEmojis = {
   happy: <Smile className="h-8 w-8 text-green-500" />,
   neutral: <Meh className="h-8 w-8 text-amber-500" />,
   sad: <Frown className="h-8 w-8 text-blue-500" />
+};
+
+const chartConfig = {
+  confidence: {
+    color: "#9b87f5",
+  },
+  trend: {
+    color: "#7E69AB",
+  }
 };
 
 const ConfidenceDashboard: React.FC = () => {
@@ -92,7 +98,7 @@ const ConfidenceDashboard: React.FC = () => {
           <Card className="col-span-1 lg:col-span-2 shadow-md border-0">
             <CardHeader className="pb-2">
               <CardTitle className="text-xl text-vibrocia-dark flex items-center gap-2">
-                <ChartContainer>
+                <ChartContainer config={chartConfig}>
                   <LineChart className="h-5 w-5 text-vibrocia-lavender" />
                 </ChartContainer>
                 Confidence Progress
