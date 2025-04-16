@@ -4,8 +4,6 @@ import HeroSection from '@/components/HeroSection';
 import AboutSection from '@/components/AboutSection';
 import FeaturesSection from '@/components/FeaturesSection';
 import CalloutSection from '@/components/CalloutSection';
-// Remove the import for TestimonialsSection
-import Footer from '@/components/Footer';
 
 const Index = () => {
   useEffect(() => {
@@ -54,10 +52,6 @@ const Index = () => {
       <div className="section-reveal">
         <CalloutSection />
       </div>
-      
-      {/* Remove the entire TestimonialsSection div */}
-      
-      <Footer />
     </div>
   );
 };
