@@ -1,14 +1,21 @@
 
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import Navbar from '@/components/Navbar';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 import { LineChart, LineChartIcon, BarChart, PieChart } from 'lucide-react';
+import ConfidenceDashboard from '@/components/dashboard/ConfidenceDashboard';
 
 const ConfidenceTracker = () => {
+  const [showDashboard, setShowDashboard] = useState(false);
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
+  if (showDashboard) {
+    return <ConfidenceDashboard />;
+  }
 
   return (
     <div className="min-h-screen bg-white">
@@ -196,9 +203,9 @@ const ConfidenceTracker = () => {
             <Button 
               size="lg" 
               className="bg-vibrocia-lavender hover:bg-vibrocia-lavender/90 text-white px-8 py-6 rounded-full hover-scale"
-              asChild
+              onClick={() => setShowDashboard(true)}
             >
-              <Link to="/signup">Start Tracking Now</Link>
+              View Your Dashboard
             </Button>
           </div>
         </div>
