@@ -1,7 +1,6 @@
-
 import React from 'react';
 import { Button } from '@/components/ui/button';
-import { Play, ArrowRight } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const HeroSection = () => {
@@ -29,14 +28,6 @@ const HeroSection = () => {
                   <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
                 </Link>
               </Button>
-              <Button 
-                variant="outline" 
-                size="lg" 
-                className="border-vibrocia-blue text-vibrocia-blue hover:bg-vibrocia-blue/10 px-8 py-6 rounded-full group"
-              >
-                <Play className="mr-2 h-5 w-5 transition-transform group-hover:scale-110" />
-                Watch Demo
-              </Button>
             </div>
           </div>
           <div className="md:w-1/2 relative animate-fade-in">
@@ -49,7 +40,6 @@ const HeroSection = () => {
                 <path d="M248 189C258.493 189 267 180.493 267 170C267 159.507 258.493 151 248 151C237.507 151 229 159.507 229 170C229 180.493 237.507 189 248 189Z" fill="white"/>
                 <path d="M248 202C231.431 202 218 215.431 218 232V233C218 233.552 218.448 234 219 234H277C277.552 234 278 233.552 278 233V232C278 215.431 264.569 202 248 202Z" fill="white"/>
                 
-                {/* Added speech bubble elements */}
                 <ellipse cx="315" cy="120" rx="25" ry="20" fill="#4A90E2" className="animate-pulse-glow" />
                 <ellipse cx="170" cy="95" rx="15" ry="12" fill="#5ACCC3" className="animate-pulse-glow" />
                 <ellipse cx="190" cy="265" rx="18" ry="15" fill="#9C89B8" className="animate-pulse-glow" />
