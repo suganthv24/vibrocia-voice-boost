@@ -1,7 +1,5 @@
-
 import React, { useEffect } from 'react';
 import Navbar from '@/components/Navbar';
-import Footer from '@/components/Footer';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 import { LineChart, LineChartIcon, BarChart, PieChart } from 'lucide-react';
@@ -161,43 +159,26 @@ const ConfidenceTracker = () => {
           </div>
           
           <div className="bg-vibrocia-light/20 rounded-2xl p-8 shadow-md">
-            <h3 className="text-2xl font-bold mb-6 text-center text-vibrocia-dark">How Students Use the Tracker</h3>
+            <h3 className="text-2xl font-bold mb-6 text-center text-vibrocia-dark">How It Works</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div className="bg-white rounded-xl p-6 shadow-sm">
-                <div className="flex items-start mb-4">
-                  <img 
-                    src="https://randomuser.me/api/portraits/women/32.jpg" 
-                    alt="Student" 
-                    className="w-12 h-12 rounded-full mr-4"
-                  />
-                  <div>
-                    <h4 className="font-bold text-vibrocia-dark">Priya M.</h4>
-                    <p className="text-gray-500 text-sm">Computer Science Student</p>
-                  </div>
+                <div className="mb-4">
+                  <h4 className="font-bold text-vibrocia-dark">Track Your Progress</h4>
+                  <p className="text-gray-600">
+                    Log your confidence levels and emotional responses before and after interactions.
+                    Our visual analytics help you see your growth over time.
+                  </p>
                 </div>
-                <p className="text-gray-600">
-                  "I love seeing my progress visually. After three months of tracking my confidence during 
-                  presentations, I can clearly see how much more comfortable I've become. The data doesn't lie!"
-                </p>
               </div>
               
               <div className="bg-white rounded-xl p-6 shadow-sm">
-                <div className="flex items-start mb-4">
-                  <img 
-                    src="https://randomuser.me/api/portraits/men/54.jpg" 
-                    alt="Student" 
-                    className="w-12 h-12 rounded-full mr-4"
-                  />
-                  <div>
-                    <h4 className="font-bold text-vibrocia-dark">Alex K.</h4>
-                    <p className="text-gray-500 text-sm">Electrical Engineering Major</p>
-                  </div>
+                <div className="mb-4">
+                  <h4 className="font-bold text-vibrocia-dark">Gain Insights</h4>
+                  <p className="text-gray-600">
+                    Identify patterns in your communication comfort levels and understand which
+                    situations help you thrive and which need more practice.
+                  </p>
                 </div>
-                <p className="text-gray-600">
-                  "The mood tracking helped me realize that my anxiety peaks right before interviews but 
-                  usually drops significantly after the first few minutes. Now I focus on getting through 
-                  that initial period knowing it gets better."
-                </p>
               </div>
             </div>
           </div>
